@@ -74,7 +74,7 @@ export const toJSON = function (
         node[count++] = { name, value: newNode, type: 'rule' };
       } else {
         const bits = args.split ? name.split(',') : [name];
-        for (const i in bits) {
+        for (let i in bits) {
           const sel = bits[i].trim();
           if (sel in node.children) {
             for (const att in newNode.attributes) {
