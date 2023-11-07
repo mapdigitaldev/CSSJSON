@@ -18,14 +18,14 @@ export const toCSS = function (
 ): string {
   let cssString = '';
   if (node.attributes) {
-    for (const i in node.attributes) {
+    for (let i in node.attributes) {
       const att = node.attributes[i];
       cssString += strAttr(i, att, depth);
     }
   }
   if (node.children) {
     let first = true;
-    for (const i in node.children) {
+    for (let i in node.children) {
       if (breaks && !first) {
         cssString += '\n';
       } else {
